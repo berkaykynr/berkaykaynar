@@ -1,230 +1,222 @@
 @import "./index.scss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
-.home{
+.home {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 20px;
+  .card {
     display: flex;
-    width: 100vw;
-    position: relative;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    border: 2px solid $theme-color-normal;
+    align-items: center;
+    border-radius: 12px;
+    position: absolute;
     overflow: hidden;
-    gap: 20px;
-    .card{
+    width: 70vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.59);
+    transition: 0.3s;
+    height: 80vh;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 30px;
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    .head {
+      display: flex;
+      justify-content: flex-start;
+      height: 15%;
+      align-items: center;
+      gap: 10px;
+      span {
+        color: $theme-color-bold;
+        font-weight: bolder;
+        font-size: 31px;
+        user-select: none;
+      }
+      img {
+        display: flex;
+        object-fit: contain;
+        user-select: none;
+        width: 100px;
+      }
+    }
+    .socials {
+      position: relative;
+      display: flex;
+      padding: 10px;
+      gap: 60px;
+      border-radius: 17px;
+      a {
+        color: black;
+      }
+      .icons {
+        padding: 5px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.5);
+        }
+        &[data-insta="true"] {
+          &:hover {
+            color: #e11d74;
+          }
+        }
+        &[data-mail="true"] {
+          &:hover {
+            color: #04009a;
+          }
+        }
+        &[data-linkedin="true"] {
+          &:hover {
+            color: #0489c9;
+          }
+        }
+      }
+      .mailContainer {
+        position: absolute;
+        top: 45px;
+        left: -80px;
+        display: flex;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.59);
+        border-radius: 17px;
+        transition: opacity 0.5s ease-in-out;
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      gap: 55px;
+      margin-top: 20px;
+      overflow: auto;
+      .aboutMe {
         display: flex;
         flex-direction: column;
-        border: 2px solid $theme-color-normal ;
         align-items: center;
-        border-radius: 12px;
-        position: absolute;
-        overflow: hidden;
-        width: 70vw;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        background-color: rgba(255, 255, 255, 0.59);
-        transition: 0.3s;
-        height: 80vh;
-        top: 50%;
-        transform: translate(0, -50%);
+        width: 40%;
+        overflow: auto;
         padding: 10px;
-        &:hover{
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        border: 1px solid gray;
+        border-radius: 17px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.59);
+        span {
+          font-weight: bold;
+          font-family: Inter;
+          letter-spacing: 1px;
+          color: $theme-color-bold;
         }
-        .head{
+        p {
+          font-family: Inter;
+        }
+      }
+      .experiences {
+        display: flex;
+        border: 1px solid gray;
+        flex-direction: column;
+        width: 40%;
+        gap: 20px;
+        border-radius: 17px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.59);
+        padding: 10px;
+        align-items: center;
+        overflow: auto;
+        span {
+          color: $theme-color-bold;
+          letter-spacing: 1px;
+          font-weight: bold;
+          font-family: Inter;
+        }
+        .containers {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: space-evenly;
+          gap: 20px;
+          .container {
             display: flex;
-            justify-content: flex-start;
-            height: 15%;
             align-items: center;
-            gap: 10px;
-            span{
-                color: $theme-color-bold;
-                font-weight: bolder;
-                font-size: 31px;
-                user-select: none;
-            }
-            img{
-                display: flex;
-                object-fit: contain;
-                user-select: none;
-                width: 100px;
-            }
-        }
-        .socials{
-            position: relative;
-            display: flex;
-            padding: 10px;
-            gap: 60px;
+            justify-content: space-between;
+            padding: 20px;
+            border: 1px solid black;
             border-radius: 17px;
-            a{
-                color: black;
+            cursor: pointer;
+            &:hover {
+              transform: scale(0.98);
+              background-color: rgba($theme-color-thin, 0.3);
             }
-            .icons{
-                padding: 5px;
-                cursor: pointer;
-                &:hover{
-                    transform: scale(1.5);
-                }
-                &[data-insta="true"]{
-                    &:hover{
-                        color: #e11d74;
-                    }
-                }
-                &[data-mail="true"]{
-                    &:hover{
-                        color: #04009a;
-                    }
-                }
-                &[data-linkedin="true"]{
-                    &:hover{
-                        color: #0489c9;
-                        
-                    }
-                }
+            span {
+              color: black;
+              font-weight: normal;
+              font-family: Inter;
             }
-            .mailContainer{
-                position: absolute;
-                top: 45px;
-                left: -80px;
-                display: flex;
-                padding: 10px;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                background-color: rgba(255, 255, 255, 0.59);
-                border-radius: 17px;
-                transition: opacity 0.5s ease-in-out;
+            img {
+              width: 70px;
+              height: 60px;
+              object-fit: contain;
             }
+          }
         }
-        .content{
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            justify-content: center;
-            gap: 55px;
-            margin-top: 20px;
-            overflow: auto;
-            .aboutMe{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 40%;
-                padding: 10px;
-                border: 1px solid gray;
-                border-radius: 17px;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                background-color: rgba(255, 255, 255, 0.59);
-                span{
-                    font-weight: bold;
-                    font-family: Inter;
-                    letter-spacing: 1px;
-                    color: $theme-color-bold;
-                }
-                p{
-                    font-family: Inter;
-                }
+      }
+    }
+  }
+  @media only screen and (max-width: 890px) {
+    .card {
+      width: 90vw;
+      .socials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 10px;
+        .mailContainer {
+          top: 90px;
+          left: -40px;
+        }
+      }
+      .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .experiences {
+          .containers {
+            .container {
+              padding: 10px;
             }
-            .experiences{
-                display: flex;
-                border: 1px solid gray;
-                flex-direction: column;
-                width: 40%;
-                gap: 20px;
-                border-radius: 17px;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                background-color: rgba(255, 255, 255, 0.59);
-                padding: 10px;
-                align-items: center;
-                overflow: auto;
-                span{
-                    color: $theme-color-bold;
-                    letter-spacing: 1px;
-                    font-weight: bold;
-                    font-family: Inter;
-                }
-                .containers{
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    justify-content: space-evenly;
-                    gap: 20px;
-                    .container{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding: 20px;
-                        border: 1px solid black;
-                        border-radius: 17px;
-                        cursor: pointer;
-                        &:hover{
-                            transform: scale(0.98);
-                            background-color: rgba($theme-color-thin, 0.3);
-                        }
-                        span{
-                            color: black;
-                            font-weight: normal;
-                            font-family: Inter;
-    
-                        }
-                        img{
-                            width: 70px;
-                            height: 60px;
-                            object-fit: contain;
-                        }
-                    }
-                }
-               
-            }
+          }
         }
 
-    }
-    @media only screen and (max-width:890px) {
-        .card{
-            width: 90vw;
-            .socials{
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                row-gap: 10px;
-                .mailContainer{
-                    top: 90px;
-                    left: -40px;
-                }
-            }
-            .content{
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                .experiences{
-                   .containers{
-                    .container{
-                        padding: 10px;
-                    }
-                } 
-                }
-                
-                .aboutMe{
-                    width: 90%;
-                    overflow: scroll;
-                    p{
-                        font-size:12px;
-                    }
-                }
-                .experiences{
-                    width: 90%;
-                }
-                
-            }
+        .aboutMe {
+          width: 90%;
+          overflow: scroll;
+          p {
+            font-size: 12px;
+          }
         }
-       
-    }
-    @media only screen and (max-width:1250px) {
-        .card{
-            .content{
-                .aboutMe{
-                    height: 55vh;
-                    overflow: auto;
-                }
-               
-            }
+        .experiences {
+          width: 90%;
         }
-       
+      }
     }
-    
+  }
+  @media only screen and (max-width: 1250px) {
+    .card {
+      .content {
+        .aboutMe {
+          height: 55vh;
+          overflow: auto;
+        }
+      }
+    }
+  }
 }

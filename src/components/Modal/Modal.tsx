@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./Modal.module.scss";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
@@ -16,22 +16,18 @@ export default function Modal({
   onClose: any;
   show: boolean;
 }) {
-  const YourComponent = () => {
-    useEffect(() => {
-      const keyDownHandler = (event: KeyboardEvent) => {
-        console.log("User pressed: ", event.key);
-        if (event.key === "Escape") {
-          event.preventDefault();
-          console.log("esc");
-          onClose();
-        }
-      };
-      document.addEventListener("keydown", keyDownHandler);
-      return () => {
-        document.removeEventListener("keydown", keyDownHandler);
-      };
-    }, []);
-  };
+  useEffect(() => {
+    const keyDownHandler = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+      }
+    };
+    document.addEventListener("keydown", keyDownHandler);
+    return () => {
+      document.removeEventListener("keydown", keyDownHandler);
+    };
+  }, []);
 
   return (
     <div
