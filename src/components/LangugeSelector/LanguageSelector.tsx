@@ -41,8 +41,12 @@ export default function LanguageSelector() {
   }
 
   return (
-    <div className={styles.selectorContainer} ref={containerRef}>
-      <div className={styles.selector} onClick={() => setIsOpen(!isOpen)}>
+    <div
+      className={styles.selectorContainer}
+      ref={containerRef}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className={styles.selector}>
         <div className={styles.select}>
           {selectedLanguage == "tr" ? (
             <img src="/images/TR.SVG" alt="" />

@@ -21,7 +21,7 @@
     overflow: hidden;
     width: 70vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.59);
+    background-color: rgba(255, 255, 255, 0.19);
     transition: 0.3s;
     height: 80vh;
     top: 50%;
@@ -61,6 +61,7 @@
       .icons {
         padding: 5px;
         cursor: pointer;
+        color: white;
         &:hover {
           transform: scale(1.5);
         }
@@ -77,6 +78,11 @@
         &[data-linkedin="true"] {
           &:hover {
             color: #0489c9;
+          }
+        }
+        &[data-git="true"] {
+          &:hover {
+            color: black;
           }
         }
       }
@@ -110,7 +116,7 @@
         border: 1px solid gray;
         border-radius: 17px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        background-color: rgba(255, 255, 255, 0.59);
+        background-color: rgba(0, 0, 0, 0.29);
         span {
           font-weight: bold;
           font-family: Inter;
@@ -119,6 +125,7 @@
         }
         p {
           font-family: Inter;
+          color: white;
         }
       }
       .experiences {
@@ -129,7 +136,7 @@
         gap: 20px;
         border-radius: 17px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        background-color: rgba(255, 255, 255, 0.59);
+        background-color: rgba(0, 0, 0, 0.29);
         padding: 10px;
         align-items: center;
         overflow: auto;
@@ -150,7 +157,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px;
-            border: 1px solid black;
+            border: 1px solid white;
             border-radius: 17px;
             cursor: pointer;
             &:hover {
@@ -158,7 +165,7 @@
               background-color: rgba($theme-color-thin, 0.3);
             }
             span {
-              color: black;
+              color: white;
               font-weight: normal;
               font-family: Inter;
             }
@@ -176,9 +183,9 @@
     .card {
       width: 90vw;
       .socials {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
         .mailContainer {
           top: 90px;
           left: -40px;
@@ -191,7 +198,7 @@
         .experiences {
           .containers {
             .container {
-              padding: 10px;
+              padding: 5px;
             }
           }
         }
@@ -211,7 +218,15 @@
   }
   @media only screen and (max-width: 1250px) {
     .card {
+      padding: 0px;
+      padding-top: 10px;
+      padding-bottom: 7px;
       .content {
+        .experiences {
+          .containers {
+            gap: 10px;
+          }
+        }
         .aboutMe {
           height: 55vh;
           overflow: auto;
