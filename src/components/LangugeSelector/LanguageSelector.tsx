@@ -49,9 +49,9 @@ export default function LanguageSelector() {
       <div className={styles.selector}>
         <div className={styles.select}>
           {selectedLanguage == "tr" ? (
-            <img src="/images/TR.SVG" alt="" />
+            <img src="/images/TR.svg" alt="" />
           ) : (
-            <img src="/images/EN.SVG" alt="" />
+            <img src="/images/EN.svg" alt="" />
           )}
           <div>
             {isOpen ? (
@@ -66,9 +66,9 @@ export default function LanguageSelector() {
         className={styles.choices}
         style={{ display: isOpen ? "flex" : "none" }}
       >
-        <img src="/images/TR.SVG" alt="" onClick={toggleTurkish} />
+        <img src="/images/TR.svg" alt="" onClick={toggleTurkish} />
         <div className={styles.divider} />
-        <img src="/images/EN.SVG" alt="" onClick={toggleEnglish} />
+        <img src="/images/EN.svg" alt="" onClick={toggleEnglish} />
       </div>
     </div>
   );
