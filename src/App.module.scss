@@ -205,10 +205,18 @@
         }
 
         .aboutMe {
+          max-height: 50px;
           width: 90%;
           overflow: scroll;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          &:hover {
+            transform: scale(0.95);
+          }
           p {
             font-size: 12px;
+            display: none;
           }
         }
         .experiences {
@@ -223,11 +231,6 @@
       padding-top: 10px;
       padding-bottom: 7px;
       .content {
-        .experiences {
-          .containers {
-            gap: 10px;
-          }
-        }
         .aboutMe {
           height: 55vh;
           overflow: auto;

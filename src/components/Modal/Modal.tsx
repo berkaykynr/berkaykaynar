@@ -12,7 +12,7 @@ export default function Modal({
 }: {
   header: string;
   content: Array<any>;
-  images: Array<any>;
+  images: Array<any> | null;
   onClose: any;
   show: boolean;
 }) {
@@ -23,9 +23,8 @@ export default function Modal({
       if (
         containerRef.current &&
         !containerRef.current.contains(event.target as Node)
-      ) {
+      )
         setIsClickedPhoto(false);
-      }
     };
     document.addEventListener("click", handleOutsideClick);
     return () => {
@@ -78,7 +77,7 @@ export default function Modal({
           })}
         </div>
         <div className={styles.images} ref={containerRef}>
-          {images.map((item, index) => {
+          {images?.map((item, index) => {
             if (item.href) {
               return (
                 <a key={index} href={item.href} data-clickable={true}>

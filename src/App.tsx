@@ -28,15 +28,16 @@ export default function Home() {
   const [isOpenEvaModal, setIsOpenEvaModal] = useState(false);
   const [isOpenSugarModal, setIsOpenSugarModal] = useState(false);
   const [isOpenGoogleModal, setIsOpenGoogleModal] = useState(false);
+  const [isOpenAboutMe, setIsOpenAboutMe] = useState(false);
 
   const instaLink = "https://instagram.com/berkaykynr";
   const gitLink = "https://github.com/berkaykynr";
   const linkedinLink = "https://www.linkedin.com/in/berkay-k-60b88720b/";
   const mail = "berkay.kaynar65@gmail.com";
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 890);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
+    setIsMobile(window.innerWidth <= 890);
   };
 
   useEffect(() => {
@@ -81,6 +82,12 @@ export default function Home() {
     { src: "/images/google-logo.png" },
   ];
 
+  function handleAboutMe() {
+    if (isMobile && !isOpenAboutMe) {
+      setIsOpenAboutMe(true);
+    }
+  }
+
   return (
     <div className={styles.home}>
       {isMobile && <LanguageSelector />}
@@ -92,6 +99,13 @@ export default function Home() {
         onClose={() => setIsOpenEvaModal(false)}
       ></Modal>
       <Modal
+        content={aboutMe}
+        images={null}
+        header={t("aboutMe")}
+        show={isOpenAboutMe}
+        onClose={() => setIsOpenAboutMe(false)}
+      ></Modal>
+      <Modal
         content={sugarTechContent}
         images={sugarImages}
         header="Sugar Technology"
@@ -101,7 +115,7 @@ export default function Home() {
       <Modal
         content={googleContent}
         images={googleImages}
-        header="Google Oyun ve Uygulama Akademisi"
+        header={t("google")}
         show={isOpenGoogleModal}
         onClose={() => setIsOpenGoogleModal(false)}
       ></Modal>
@@ -140,7 +154,7 @@ export default function Home() {
           </a>
         </div>
         <div className={styles.content}>
-          <div className={styles.aboutMe}>
+          <div className={styles.aboutMe} onClick={handleAboutMe}>
             <span> {t("aboutMe")} </span>
             {aboutMe.map((item, index) => (
               <p key={index}>{item}</p>
