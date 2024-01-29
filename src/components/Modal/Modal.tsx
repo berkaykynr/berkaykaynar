@@ -63,7 +63,7 @@ export default function Modal({
           className={styles.imageViewer}
           style={{ display: isClickedPhoto ? "flex" : "none" }}
         >
-          <img src={photoUrl} />
+          <img src={photoUrl} alt="berkay kaynar" />
         </div>
 
         <div className={styles.closeIcon} onClick={onClose}>
@@ -82,7 +82,7 @@ export default function Modal({
             if (item.href) {
               return (
                 <a key={index} href={item.href} data-clickable={true}>
-                  <img src={item.src} alt="" />
+                  <img src={item.src} alt="berkay kaynar" />
                 </a>
               );
             } else {
@@ -90,6 +90,7 @@ export default function Modal({
                 <img
                   src={item.src}
                   key={index}
+                  alt="berkay kaynar"
                   onClick={() => {
                     handleClickPhoto(item.src);
                   }}

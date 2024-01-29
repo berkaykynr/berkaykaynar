@@ -108,7 +108,11 @@ export default function Home() {
       <div className={styles.card}>
         {!isMobile && <LanguageSelector />}
         <div className={styles.head}>
-          <img src="/images/pp.png" className={styles.image} />
+          <img
+            src="/images/pp.png"
+            alt="berkay kaynar"
+            className={styles.image}
+          />
           <span>Berkay Kaynar</span>
         </div>
         <div className={styles.socials}>
@@ -150,21 +154,24 @@ export default function Home() {
                 onClick={() => setIsOpenEvaModal(true)}
               >
                 <span>EVA Team</span>
-                <img src="/images/eva.png" alt="" />
+                <img src="/images/eva.png" alt="berkay-kaynar-eva-team" />
               </div>
               <div
                 className={styles.container}
                 onClick={() => setIsOpenSugarModal(true)}
               >
                 <span>Sugar Technology</span>
-                <img src="/images/sugartech.png" alt="" />
+                <img
+                  src="/images/sugartech.png"
+                  alt="berkay kaynar sugar tech"
+                />
               </div>
               <div
                 className={styles.container}
                 onClick={() => setIsOpenGoogleModal(true)}
               >
                 <span>{t("google")} </span>
-                <img src="/images/google.png" alt="" />
+                <img src="/images/google.png" alt="berkay kaynar google" />
               </div>
             </div>
           </div>
