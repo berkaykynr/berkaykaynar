@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba($theme-color-bolder, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
     position: absolute;
     width: 55%;
     border-radius: 17px;
-    background-color: $theme-color-bold;
+    background-color: $theme-color-bolder;
     padding: 10px;
     .imageViewer {
       position: absolute;

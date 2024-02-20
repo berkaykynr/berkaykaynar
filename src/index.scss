@@ -8,9 +8,9 @@ body {
   background: rgb(2, 0, 36);
   background: radial-gradient(
     circle,
-    rgba(2, 0, 36, 1) 28%,
-    rgba(9, 9, 121, 1) 55%,
-    rgba(9, 9, 121, 1) 81%
+    rgb(72, 109, 101) 28%,
+    rgb(9, 121, 101) 55%,
+    rgb(9, 89, 121) 81%
   );
 }
 
@@ -19,8 +19,14 @@ code {
     monospace;
 }
 
-$theme-color-bolder: #190482;
-$theme-color-bold: #7752fe;
-$theme-color-normal: #8e8ffa;
-$theme-color-thin: #c2d9ff;
+// $theme-color-bolder: #190482;
+// $theme-color-bold: #7752fe;
+// $theme-color-normal: #8e8ffa;
+// $theme-color-thin: #c2d9ff;
+// $border-color: rgb(220, 220, 220);
+
+$theme-color-bolder: #048265;
+$theme-color-bold: #52fee1;
+$theme-color-normal: #8efae8;
+$theme-color-thin: #c2fff7;
 $border-color: rgb(220, 220, 220);
