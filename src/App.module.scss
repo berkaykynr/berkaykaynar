@@ -161,6 +161,7 @@
             border: 1px solid white;
             border-radius: 17px;
             cursor: pointer;
+            height: 60px;
             &:hover {
               transform: scale(0.98);
               background-color: rgba($theme-color-thin, 0.3);

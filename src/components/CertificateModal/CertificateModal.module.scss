@@ -1,0 +1,75 @@
+@import "../../index.scss";
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($theme-color-bolder, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: default;
+  .modalContent {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transform: translate(0, -50%);
+    top: 50%;
+    position: absolute;
+    width: 55%;
+    border-radius: 17px;
+    background-color: $theme-color-bolder;
+    padding: 10px;
+    .closeIcon {
+      display: flex;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+    .header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      span {
+        color: white;
+        font-weight: bold;
+      }
+    }
+    .certificates {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      height: 600px;
+      overflow-x: auto;
+      .title {
+        border: 1px dashed white;
+        border-radius: 17px;
+        padding: 5px;
+        cursor: pointer;
+
+        p {
+          color: white;
+        }
+        &:hover {
+          transform: scale(0.98);
+          background-color: rgba($theme-color-thin, 0.3);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 930px) {
+    .modalContent {
+      width: 80%;
+      height: 450px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}

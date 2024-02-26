@@ -17,5 +17,20 @@
     "google" : "Google Oyun ve Uygulama Akademisi",
     "googleContent1" :"2023 yılında Google Oyun ve Uygulama Akademisi'ne kabul edilerek bursiyer olarak seçilmek, yazılım geliştirme ve girişimcilik alanında kazandığım değerli deneyimleri içermektedir. Bu akademi kapsamında, Flutter ve Dart teknolojilerini etkin bir şekilde kullanarak mobil uygulama geliştirmenin yanı sıra, bilişim hukuku, proje yönetimi ve girişimcilik konularında kapsamlı derslere katıldım.",
     "googleContent2" :"Akademinin zorlu bir aşamasını başarıyla tamamlamak adına, bir bootcamp sürecine katıldım ve bu süreçte ekip çalışmasıyla bir mobil uygulama geliştirdik. Proje, Flutter'daki state management konseptini etkili bir şekilde uygulamak amacıyla MobX kütüphanesini kullanarak geliştirildi. Bu süreç, sadece teknik becerilerimi geliştirmekle kalmayıp aynı zamanda proje yönetimi ve ekip koordinasyonu konusunda önemli pratik bilgiler edinmemi sağladı.",
-    "googleContent3" :"Google Oyun ve Uygulama Akademisi'nde elde ettiğim bilgi birikimi ve projelerimdeki liderlik deneyimi, gelecekteki projelerde ve ekiplerde etkili bir katılımcı olma yeteneğimi güçlendirmiştir. Bu değerli deneyimleri, başta Flutter ve Dart olmak üzere geniş bir teknik yelpaze ile birleştirerek, şirketinize getirmek için sabırsızlanıyorum."
- }
+    "googleContent3" :"Google Oyun ve Uygulama Akademisi'nde elde ettiğim bilgi birikimi ve projelerimdeki liderlik deneyimi, gelecekteki projelerde ve ekiplerde etkili bir katılımcı olma yeteneğimi güçlendirmiştir. Bu değerli deneyimleri, başta Flutter ve Dart olmak üzere geniş bir teknik yelpaze ile birleştirerek, şirketinize getirmek için sabırsızlanıyorum.",
+
+    "certificates" : "Sertifikalarım",
+    "kotlinBasic" : "Kotlin İle Android Mobil Uygulama Geliştirme Eğitimi Temel Seviye",
+    "kotlinAdvanced" : "Kotlin İle Android Mobil Uygulama Geliştirme İleri Seviye",
+    "javaBasic" : "JAVA İle Programlamaya Giriş",
+    "javaAdvanced" : "İleri Seviye Java",
+    "projectsBasic" :"Proje Yönetiminin Temelleri",
+    "projectStart" :"Projeyi Başlatma: Projeye Başarıyla Adım Atma",
+    "googleProject" :"Proje Planlaması: Her Şeyi Bir Araya Getirmek",
+    "googleFlutter": "Oyun ve Uygulama Akademisi: Flutter ile Uygulama Geliştirme",
+    "googleEntrepreneurship" : "Oyun ve Uygulama Akademisi: Teknoloji Girişimciliği",
+    "teknofestAutonom" : "Robotaksi Binek Otonom Araç Yarışması Katılım Belgesi",
+    "teknofestUav" :"Uluslararası İnsansız Hava Araçları Araçları Yarışması Katılım Belgesi"
+
+
+}

@@ -6,6 +6,7 @@ import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 import LanguageSelector from "./components/LangugeSelector/LanguageSelector";
+import CertificateModal from "./components/CertificateModal/CertificateModal";
 
 i18n
   .use(initReactI18next)
@@ -29,6 +30,7 @@ export default function Home() {
   const [isOpenSugarModal, setIsOpenSugarModal] = useState(false);
   const [isOpenGoogleModal, setIsOpenGoogleModal] = useState(false);
   const [isOpenAboutMe, setIsOpenAboutMe] = useState(false);
+  const [isOpenCertificates, setIsOpenCertificate] = useState(false);
 
   const instaLink = "https://instagram.com/berkaykynr";
   const gitLink = "https://github.com/berkaykynr";
@@ -119,6 +121,10 @@ export default function Home() {
         show={isOpenGoogleModal}
         onClose={() => setIsOpenGoogleModal(false)}
       ></Modal>
+      <CertificateModal
+        show={isOpenCertificates}
+        onClose={() => setIsOpenCertificate(false)}
+      />
       <div className={styles.card}>
         {!isMobile && <LanguageSelector />}
         <div className={styles.head}>
@@ -186,6 +192,12 @@ export default function Home() {
               >
                 <span>{t("google")} </span>
                 <img src="/images/google.png" alt="berkay kaynar google" />
+              </div>
+              <div
+                className={styles.container}
+                onClick={() => setIsOpenCertificate(true)}
+              >
+                <span>{t("certificates")} </span>
               </div>
             </div>
           </div>

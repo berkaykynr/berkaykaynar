@@ -17,5 +17,15 @@
     "google" : "Google Game and Application Academy",
     "googleContent1":"In 2023, being accepted and awarded a scholarship at the Google Game and Application Academy encapsulates valuable experiences gained in software development and entrepreneurship. Within this academy, I actively utilized Flutter and Dart technologies to develop mobile applications and participated in comprehensive courses covering information technology law, project management, and entrepreneurship.",
     "googleContent2":"To successfully complete a challenging phase of the academy, I participated in a bootcamp process where, through teamwork, we developed a mobile application. The project was created using the MobX library in Flutter to effectively implement the state management concept. This experience not only enhanced my technical skills but also provided valuable practical insights into project management and team coordination.",
-    "googleContent3":"The knowledge I gained at the Google Game and Application Academy, along with my leadership experience in projects, has strengthened my ability to be an effective contributor in future projects and teams. I am eager to bring these valuable experiences, combined with a broad technical skill set, including but not limited to Flutter and Dart, to contribute to your company."
+    "googleContent3":"The knowledge I gained at the Google Game and Application Academy, along with my leadership experience in projects, has strengthened my ability to be an effective contributor in future projects and teams. I am eager to bring these valuable experiences, combined with a broad technical skill set, including but not limited to Flutter and Dart, to contribute to your company.",
+
+    "certificates" : "My Certificates",
+    "kotlinBasic" : "Basic Level of Android Mobile Application Development Training with Kotlin",
+    "kotlinAdvanced" :"Advanced Level of Android Mobile Application Development With Kotlin",
+    "javaBasic" : "Introduction to Programming with JAVA",
+    "javaAdvanced" : "Advanced Level Java",
+    "googleProjects" : "Game and Application Academy: Project Management Certificates",
+    "googleFlutter" :"Game and Application Academy: Application Development with Flutter",
+    "googleEntrepreneurship" : "Game and Application Academy: Technology Entrepreneurship",
+    "teknofestAutonom" : "Robotaxi Passenger Autonomous Vehicle Competition Participation Certificate"
 }
