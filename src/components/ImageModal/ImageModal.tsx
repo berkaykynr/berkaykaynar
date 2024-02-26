@@ -21,7 +21,7 @@ export default function ImageModal({
     >
       <div className={styles.modalContent}>
         <div className={styles.closeIcon} onClick={onClose}>
-          <IoCloseCircleOutline size="20px" color="#048265" />
+          <IoCloseCircleOutline size="20px" color="#7752fe" />
         </div>
         <img src={src} alt={src + "image"} />
         <div className={styles.title}>
