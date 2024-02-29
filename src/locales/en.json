@@ -24,8 +24,11 @@
     "kotlinAdvanced" :"Advanced Level of Android Mobile Application Development With Kotlin",
     "javaBasic" : "Introduction to Programming with JAVA",
     "javaAdvanced" : "Advanced Level Java",
-    "googleProjects" : "Game and Application Academy: Project Management Certificates",
+    "projectsBasic" :"Game and Application Academy: Fundamentals of Project Management",
+    "projectStart" :"Game and Application Academy: Successfully Stepping into the Project",
+    "googleProject" :"Game and Application Academy: Deconstructing Everything Together",
     "googleFlutter" :"Game and Application Academy: Application Development with Flutter",
     "googleEntrepreneurship" : "Game and Application Academy: Technology Entrepreneurship",
-    "teknofestAutonom" : "Robotaxi Passenger Autonomous Vehicle Competition Participation Certificate"
+    "teknofestAutonom" : "Robotaxi Passenger Autonomous Vehicle Competition Participation Certificate",
+    "teknofestUav" : "Certificate of Participation in the International Unmanned Aerial Vehicles Vehicles Competition"
 }
