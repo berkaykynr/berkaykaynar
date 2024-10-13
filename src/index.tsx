@@ -3,13 +3,24 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { PrimeReactProvider } from "primereact/api";
+import Home from "./Istek/Home";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <PrimeReactProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}></Route>
+          <Route path="/istek" element={<Home />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </PrimeReactProvider>
   </React.StrictMode>
 );
 

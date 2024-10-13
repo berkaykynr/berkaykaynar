@@ -1,3 +1,7 @@
+@import "primeflex/primeflex.scss";
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+@import "primeicons/primeicons.css";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,6 +16,7 @@ body {
     rgba(9, 9, 121, 1) 55%,
     rgba(9, 9, 121, 1) 81%
   );
+  padding-bottom: 10px;
 }
 //   circle,
 //   rgb(72, 109, 101) 28%,
@@ -34,3 +39,15 @@ $border-color: rgb(220, 220, 220);
 // $theme-color-normal: #8efae8;
 // $theme-color-thin: #c2fff7;
 // $border-color: rgb(220, 220, 220);
+
+.p-speeddial-button.p-button.p-button-icon-only {
+  width: 2rem;
+  height: 2rem;
+}
+.p-speeddial-action {
+  width: 2rem;
+  height: 2rem;
+}
+.p-toast {
+  max-width: 18rem;
+}

@@ -1,0 +1,16 @@
+.customBackgroundContainer {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden; /* Arka planın taşmasını engeller */
+}
+
+.customBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); /* Hafif beyaz tonlu şeffaf arka plan */
+  backdrop-filter: blur(10px); /* Bulanık arka plan */
+  z-index: -1; /* Arka planın içerikten geride kalması */
+}
