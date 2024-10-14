@@ -3,7 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  RouterProvider,
+  BrowserRouter,
+  createBrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { PrimeReactProvider } from "primereact/api";
 import Home from "./Istek/Home";
 
@@ -11,15 +17,21 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/istek",
+    element: <Home />,
+  },
+]);
+
 root.render(
   <React.StrictMode>
     <PrimeReactProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}></Route>
-          <Route path="/istek" element={<Home />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </PrimeReactProvider>
   </React.StrictMode>
 );
