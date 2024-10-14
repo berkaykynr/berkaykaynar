@@ -7,6 +7,7 @@ import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 import LanguageSelector from "./components/LangugeSelector/LanguageSelector";
 import CertificateModal from "./components/CertificateModal/CertificateModal";
+import { useNavigate } from "react-router-dom";
 
 i18n
   .use(initReactI18next)
@@ -37,6 +38,17 @@ export default function Home() {
   const linkedinLink = "https://www.linkedin.com/in/berkay-k-60b88720b/";
   const mail = "berkay.kaynar65@gmail.com";
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 890);
+
+  const [clickCount, setClickCount] = useState(0);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    setClickCount((prevCount) => prevCount + 1);
+
+    if (clickCount + 1 === 5) {
+      navigate("/istek");
+    }
+  };
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 890);
@@ -139,6 +151,7 @@ export default function Home() {
           <div
             className={styles.mailContainer}
             style={{ display: isOpenMail ? "flex" : "none" }}
+            onClick={handleClick}
           >
             <span>{mail}</span>
           </div>
