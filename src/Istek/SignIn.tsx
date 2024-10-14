@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
@@ -28,8 +27,8 @@ export default function SignIn({ setIsAuth }: { setIsAuth: any }) {
   };
 
   function handleSignIn() {
-    if (username === "omer") {
-      if (password === "3455") {
+    if (username.trimEnd() === "omer" || username.trimEnd() === "ömer") {
+      if (password === "3455" || password === "5534") {
         localStorage.setItem("isAuth", "true");
         setIsAuth(true);
       } else {
