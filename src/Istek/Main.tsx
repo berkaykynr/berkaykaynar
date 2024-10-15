@@ -58,7 +58,9 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
       // Ürün listesini güncelle
       setProducts([...products, newProduct]);
 
+      setIsLoading(true);
       await setProductsApi([...products, newProduct]);
+      setIsLoading(false);
 
       // Formu temizle
       setProdName("");
@@ -80,8 +82,11 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
     }
   };
 
-  const deleteProduct = (product: any) => {
+  const deleteProduct = async (product: any) => {
     setProducts(products.filter((p) => p.id !== product.id));
+    setIsLoading(true);
+    await setProductsApi(products.filter((p) => p.id !== product.id));
+    setIsLoading(false);
   };
 
   const textEditor = (options: any) => {
@@ -95,11 +100,15 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
     );
   };
 
-  const onCellEditComplete = (e: any) => {
+  const onCellEditComplete = async (e: any) => {
     let { rowData, newValue, field, originalEvent: event } = e;
 
     if (newValue.trim().length > 0) rowData[field] = newValue;
     else event.preventDefault();
+
+    setIsLoading(true);
+    await setProductsApi(products);
+    setIsLoading(false);
   };
 
   function handleSignOut() {
