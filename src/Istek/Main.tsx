@@ -7,6 +7,7 @@ import { Column } from "primereact/column";
 import { Toast } from "primereact/toast";
 import { SpeedDial } from "primereact/speeddial";
 import { Dialog } from "primereact/dialog";
+import { InputSwitch } from "primereact/inputswitch";
 
 import { ProgressSpinner } from "primereact/progressspinner";
 import { getProductsApi, setProductsApi } from "./Api";
@@ -18,9 +19,11 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
   const [prodMetraj, setProdMetraj] = useState<number | null>();
   const [prodNumber, setProdNumber] = useState<number | null>();
   const [prodPrice, setProdPrice] = useState<number | null>();
+  const [metrePrice, setMetrePrice] = useState<number | null>();
   const [products, setProducts] = useState<Array<any>>([]);
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isMetre, setIsMetre] = useState<boolean>(false);
 
   const fetchProducts = async () => {
     setIsLoading(true);
@@ -51,8 +54,11 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
         name: prodName,
         metraj: prodMetraj ? `${prodMetraj} m` : "", // Metrajı formatla
         number: prodNumber ? `${prodNumber} adet` : "", // Adedi formatla
+        metrePrice: metrePrice ? `₺${metrePrice}` : "-", // Fiyatı formatla
         price: prodPrice ? `₺${prodPrice}` : "", // Fiyatı formatla
-        totalPrice: `₺${prodPrice * prodNumber}`,
+        totalPrice: metrePrice
+          ? `₺${prodNumber * metrePrice}`
+          : `₺${prodPrice * prodNumber}`,
       };
 
       // Ürün listesini güncelle
@@ -67,9 +73,8 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
       setProdMetraj(null);
       setProdNumber(undefined);
       setProdPrice(undefined);
-    } else {
-      showToast();
-    }
+      setMetrePrice(undefined);
+    } else showToast();
   };
 
   const showToast = () => {
@@ -163,7 +168,7 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
       />
       <Toast ref={toast} />
       <img src={"images/istek.png"} alt="istek" />
-      <div className="flex relative flex-column lg:flex-row w-full px-3 gap-5 align-items-center justify-content-center py-5 ">
+      <div className="flex relative flex-column lg:flex-row w-full px-3 gap-5 align-items-center lg:align-items-end justify-content-center py-5 ">
         <div className="flex flex-column align-items-center p-1 gap-2">
           <div className="flex text-white">İsim</div>
           <InputText
@@ -207,9 +212,23 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
           />
         </div>
         <div className="flex flex-column align-items-center p-1 gap-2">
+          <InputSwitch
+            checked={isMetre}
+            onChange={(e) => setIsMetre(e.value)}
+          />
+          <div className="flex text-white">Metre Fiyatı</div>
+          <InputNumber
+            inputClassName="shadow-none lg:w-5"
+            prefix="₺"
+            value={metrePrice}
+            disabled={!isMetre}
+            onValueChange={(e) => setMetrePrice(e.value)}
+          />
+        </div>
+        <div className="flex flex-column align-items-center p-1 gap-2">
           <div className="flex text-white">Adet Fiyatı</div>
           <InputNumber
-            inputClassName="shadow-none"
+            inputClassName="shadow-none lg:w-5"
             prefix="₺"
             value={prodPrice}
             onValueChange={(e) => setProdPrice(e.value)}
@@ -254,8 +273,15 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
           />
           <Column
             className="surface-400 border-right-2"
+            field="metrePrice"
+            header="Metre Fiyatı"
+            editor={(options) => textEditor(options)}
+            onCellEditComplete={onCellEditComplete}
+          />
+          <Column
+            className="surface-400 border-right-2"
             field="price"
-            header="Fiyat"
+            header="Adet Fiyat"
             editor={(options) => textEditor(options)}
             onCellEditComplete={onCellEditComplete}
           />
