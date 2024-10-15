@@ -45,42 +45,81 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
   }, [products]);
 
   const addProduct = async () => {
-    if (prodName && prodMetraj && prodNumber && prodPrice) {
-      const maxId =
-        products.length > 0 ? Math.max(...products.map((p) => p.id)) : 0;
+    if (!isMetre) {
+      if (prodName && prodNumber && prodPrice) {
+        const maxId =
+          products.length > 0 ? Math.max(...products.map((p) => p.id)) : 0;
+        // isMetre
+        //   ? metrePrice
+        //     ? metrePrice * prodMetraj
+        //     : ""
+        //   : prodPrice
+        //   ? `₺${prodPrice}`
+        //   : "", // Fiyatı formatla
 
-      const newProduct = {
-        id: maxId + 1, // Yeni ürün için bir id oluştur
-        name: prodName,
-        metraj: prodMetraj ? `${prodMetraj} m` : "", // Metrajı formatla
-        number: prodNumber ? `${prodNumber} adet` : "", // Adedi formatla
-        metrePrice: metrePrice ? `₺${metrePrice}` : "-", // Fiyatı formatla
-        price: isMetre
-          ? metrePrice
-            ? metrePrice * prodMetraj
-            : ""
-          : prodPrice
-          ? `₺${prodPrice}`
-          : "", // Fiyatı formatla
-        totalPrice: metrePrice
-          ? `₺${prodNumber * metrePrice}`
-          : `₺${prodPrice * prodNumber}`,
-      };
+        const newProduct = {
+          id: maxId + 1, // Yeni ürün için bir id oluştur
+          name: prodName,
+          metraj: prodMetraj ? `${prodMetraj} m` : "", // Metrajı formatla
+          number: prodNumber ? `${prodNumber} adet` : "", // Adedi formatla
+          metrePrice: metrePrice ? `₺${metrePrice}` : "-", // Fiyatı formatla
+          price: prodPrice ? `₺${prodPrice}` : "",
+          totalPrice: `₺${prodPrice * prodNumber}`,
+        };
 
-      // Ürün listesini güncelle
-      setProducts([...products, newProduct]);
+        // Ürün listesini güncelle
+        setProducts([...products, newProduct]);
 
-      setIsLoading(true);
-      await setProductsApi([...products, newProduct]);
-      setIsLoading(false);
+        setIsLoading(true);
+        await setProductsApi([...products, newProduct]);
+        setIsLoading(false);
 
-      // Formu temizle
-      setProdName("");
-      setProdMetraj(null);
-      setProdNumber(undefined);
-      setProdPrice(undefined);
-      setMetrePrice(undefined);
-    } else showToast();
+        // Formu temizle
+        setProdName("");
+        setProdMetraj(null);
+        setProdNumber(undefined);
+        setProdPrice(undefined);
+        setMetrePrice(undefined);
+      } else showToast();
+    } else {
+      if (prodName && prodMetraj && prodNumber && prodPrice) {
+        const maxId =
+          products.length > 0 ? Math.max(...products.map((p) => p.id)) : 0;
+        // isMetre
+        //   ? metrePrice
+        //     ? metrePrice * prodMetraj
+        //     : ""
+        //   : prodPrice
+        //   ? `₺${prodPrice}`
+        //   : "", // Fiyatı formatla
+
+        const newProduct = {
+          id: maxId + 1, // Yeni ürün için bir id oluştur
+          name: prodName,
+          metraj: prodMetraj ? `${prodMetraj} m` : "", // Metrajı formatla
+          number: prodNumber ? `${prodNumber} adet` : "", // Adedi formatla
+          metrePrice: metrePrice ? `₺${metrePrice}` : "-", // Fiyatı formatla
+          price: metrePrice ? `₺${metrePrice * prodMetraj}` : "",
+          totalPrice: metrePrice
+            ? `₺${prodMetraj * prodNumber * metrePrice}`
+            : "",
+        };
+
+        // Ürün listesini güncelle
+        setProducts([...products, newProduct]);
+
+        setIsLoading(true);
+        await setProductsApi([...products, newProduct]);
+        setIsLoading(false);
+
+        // Formu temizle
+        setProdName("");
+        setProdMetraj(null);
+        setProdNumber(undefined);
+        setProdPrice(undefined);
+        setMetrePrice(undefined);
+      } else showToast();
+    }
   };
 
   const showToast = () => {
@@ -183,11 +222,16 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
           />
         </div>
         <div className="flex flex-column align-items-center p-1 gap-2">
+          <InputSwitch
+            checked={isMetre}
+            onChange={(e) => setIsMetre(e.value)}
+          />
           <div className="flex text-white">Metraj</div>
           <InputNumber
             className="flex relative w-8"
             inputClassName="flex shadow-none w-4"
             value={prodMetraj}
+            disabled={!isMetre ? true : false}
             onValueChange={(e) => {
               setProdMetraj(e.value);
               setProdPrice(metrePrice ? metrePrice * Number(e.value) : 0);
@@ -221,10 +265,6 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
           />
         </div>
         <div className="flex flex-column align-items-center p-1 gap-2">
-          <InputSwitch
-            checked={isMetre}
-            onChange={(e) => setIsMetre(e.value)}
-          />
           <div className="flex text-white">Metre Fiyatı</div>
           <InputNumber
             inputClassName="shadow-none lg:w-5"
