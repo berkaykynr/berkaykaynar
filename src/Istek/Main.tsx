@@ -55,7 +55,13 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
         metraj: prodMetraj ? `${prodMetraj} m` : "", // Metrajı formatla
         number: prodNumber ? `${prodNumber} adet` : "", // Adedi formatla
         metrePrice: metrePrice ? `₺${metrePrice}` : "-", // Fiyatı formatla
-        price: prodPrice ? `₺${prodPrice}` : "", // Fiyatı formatla
+        price: isMetre
+          ? metrePrice
+            ? metrePrice * prodMetraj
+            : ""
+          : prodPrice
+          ? `₺${prodPrice}`
+          : "", // Fiyatı formatla
         totalPrice: metrePrice
           ? `₺${prodNumber * metrePrice}`
           : `₺${prodPrice * prodNumber}`,
@@ -182,7 +188,10 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
             className="flex relative w-8"
             inputClassName="flex shadow-none w-4"
             value={prodMetraj}
-            onValueChange={(e) => setProdMetraj(e.value)}
+            onValueChange={(e) => {
+              setProdMetraj(e.value);
+              setProdPrice(metrePrice ? metrePrice * Number(e.value) : 0);
+            }}
             showButtons
             buttonLayout="horizontal"
             decrementButtonClassName="p-button-danger"
@@ -222,7 +231,10 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
             prefix="₺"
             value={metrePrice}
             disabled={!isMetre}
-            onValueChange={(e) => setMetrePrice(e.value)}
+            onValueChange={(e) => {
+              setMetrePrice(e.value);
+              setProdPrice(prodMetraj ? prodMetraj * Number(e.value) : 0);
+            }}
           />
         </div>
         <div className="flex flex-column align-items-center p-1 gap-2">
@@ -231,6 +243,7 @@ export default function Home({ setIsAuth }: { setIsAuth: any }) {
             inputClassName="shadow-none lg:w-5"
             prefix="₺"
             value={prodPrice}
+            disabled={isMetre}
             onValueChange={(e) => setProdPrice(e.value)}
           />
         </div>
