@@ -94,11 +94,39 @@
         display: flex;
         padding: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        background-color: rgba(255, 255, 255, 0.59);
+        background-color: rgba(255, 255, 255, 1);
         border-radius: 17px;
         transition: opacity 0.5s ease-in-out;
       }
     }
+    .techs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      gap: 5px;
+      span {
+        color: white;
+        font-weight: bold;
+      }
+      .chips {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        align-items: center;
+        // justify-content: space-evenly;
+        // background-color: red;
+        padding: 5px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        gap: 3px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
     .content {
       display: flex;
       flex-direction: row;

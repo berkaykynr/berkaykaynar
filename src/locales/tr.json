@@ -46,7 +46,8 @@
     "socialMedaContent2":"Bu projede, front-end tarafında React Native kullandım. Back-end kısmında ise Node.js ve Express frameworkünden faydalandım. Mesajlaşma ve anlık iletişim için SocketIO entegrasyonu yaptım ve şu ana kadar projenin %70'ini tamamladım. Halen üzerinde çalışmaya ve geliştirmeye devam ettiğim bir proje.",
     "uavContent1":"Bu projenin amacı, İHA'ların uçuş kontrol kartı (Pixhawk) parametrelerini değiştirmek ve uçuş sırasında İHA'nın tüm kontrolünü takip etmektir. Aynı zamanda, İHA'nın otonom uçuş yapabilmesine olanak tanır. Uygulamanın bir diğer özelliği ise, eğer İHA üzerinde canlı yayın akışı sağlayan bir kamera varsa, bu kamera görüntüsünü anlık olarak izleme imkanı sunmasıdır.",
     "uavContent2":"Projemiz, TÜBİTAK 2209-A - Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı kapsamında destek almaya hak kazanmıştır.",
-    "uavContent3":"Projenin front-end kısmında Electron.js kullanarak çok platformlu bir masaüstü uygulaması geliştirdik. Araçla haberleşme kısmında ise Python’da 'dronekit' ve 'pymavlink' kütüphanelerinden faydalandık. Veriyi arayüze aktarmak için SocketIO kullandık. Projeyi, Teknofest Uluslararası İnsansız Hava Araçları Yarışması'nda aktif olarak kullanarak başarılı bir sonuç elde ettik."
+    "uavContent3":"Projenin front-end kısmında Electron.js kullanarak çok platformlu bir masaüstü uygulaması geliştirdik. Araçla haberleşme kısmında ise Python’da 'dronekit' ve 'pymavlink' kütüphanelerinden faydalandık. Veriyi arayüze aktarmak için SocketIO kullandık. Projeyi, Teknofest Uluslararası İnsansız Hava Araçları Yarışması'nda aktif olarak kullanarak başarılı bir sonuç elde ettik.",
+    "techs":"Kullandığım Teknolojiler ve Araçlar"
 
 
 }

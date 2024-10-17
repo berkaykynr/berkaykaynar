@@ -9,6 +9,7 @@ import LanguageSelector from "./components/LangugeSelector/LanguageSelector";
 import CertificateModal from "./components/CertificateModal/CertificateModal";
 import { useNavigate } from "react-router-dom";
 import ProjectsModal from "./components/ProjectsModal/ProjectsModal";
+import { Chip } from "primereact/chip";
 
 i18n
   .use(initReactI18next)
@@ -125,6 +126,56 @@ export default function Home() {
     }
   }
 
+  const abilities = [
+    "Typescript",
+    "Javascript",
+    "React",
+    "React Native",
+    "Electron.js",
+    "Redux",
+    "Node.js",
+    "Express.js",
+    "Socket.IO",
+    "Python",
+    "VS Code",
+    "Visual Studio",
+    "Scrum",
+    "Agile",
+    "Dart",
+    "Flutter",
+    "MobX",
+    "Git",
+    "Jenkins",
+    "SonarQube",
+    "Sentry",
+    "RabbitMQ",
+    "Docker",
+    "Portainer",
+    "Linux",
+    "Ubuntu",
+    "Gazebo",
+    "Npm - Yarn",
+    "Dronekit",
+    "Pymavlink",
+    "Scikit-learn",
+    "Java",
+    "Spring",
+    "Kotlin",
+    "C",
+    "C#",
+    "Unity UI Toolkit",
+    "Arduino",
+  ];
+
+  const getRandomColorWithAlpha = () => {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return `${color}66`; // 66, hex formatında 0.4 alpha değerine karşılık gelir
+  };
+
   return (
     <div className={styles.home}>
       {isMobile && <LanguageSelector />}
@@ -221,6 +272,31 @@ export default function Home() {
             />
           </a>
         </div>
+        <div className={styles.techs}>
+          <span>{t("techs")}</span>
+          <div className={styles.chips}>
+            {abilities.map((item: any, index: any) => (
+              <Chip
+                className="flex aign-items-center justify-content-centerl w-20rem px-5 h-2rem m-1"
+                style={{ backgroundColor: getRandomColorWithAlpha() }}
+                template={
+                  <div
+                    style={{
+                      width: "8rem",
+                      textAlign: "center",
+                      color: "white",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {item}
+                  </div>
+                }
+                key={index}
+              />
+            ))}
+          </div>
+        </div>
+
         <div className={styles.content}>
           <div className={styles.aboutMe} onClick={handleAboutMe}>
             <span> {t("aboutMe")} </span>
