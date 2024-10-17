@@ -8,6 +8,7 @@ import { initReactI18next, useTranslation } from "react-i18next";
 import LanguageSelector from "./components/LangugeSelector/LanguageSelector";
 import CertificateModal from "./components/CertificateModal/CertificateModal";
 import { useNavigate } from "react-router-dom";
+import ProjectsModal from "./components/ProjectsModal/ProjectsModal";
 
 i18n
   .use(initReactI18next)
@@ -29,9 +30,14 @@ export default function Home() {
   const [isOpenMail, setIsOpenMail] = useState(false);
   const [isOpenEvaModal, setIsOpenEvaModal] = useState(false);
   const [isOpenSugarModal, setIsOpenSugarModal] = useState(false);
+  const [isOpenTubitakModal, setIsOpenTubitakModal] = useState(false);
   const [isOpenGoogleModal, setIsOpenGoogleModal] = useState(false);
   const [isOpenAboutMe, setIsOpenAboutMe] = useState(false);
   const [isOpenCertificates, setIsOpenCertificate] = useState(false);
+  const [isOpenProjects, setIsOpenProjects] = useState(false);
+  const [isOpenSocialMediaModal, setIsOpenSocialMediaModal] =
+    useState<boolean>(false);
+  const [isOpenUavModal, setIsOpenUavModal] = useState<boolean>(false);
 
   const instaLink = "https://instagram.com/berkaykynr";
   const gitLink = "https://github.com/berkaykynr";
@@ -39,16 +45,7 @@ export default function Home() {
   const mail = "berkay.kaynar65@gmail.com";
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 890);
 
-  const [clickCount, setClickCount] = useState(0);
   const navigate = useNavigate();
-
-  const handleClick = () => {
-    setClickCount((prevCount) => prevCount + 1);
-
-    if (clickCount + 1 === 5) {
-      navigate("/istek");
-    }
-  };
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 890);
@@ -74,12 +71,21 @@ export default function Home() {
     t("sugarTechContent2"),
     t("sugarTechContent3"),
   ];
+  const tubitakContent = [
+    t("tubitakContent1"),
+    t("tubitakContent2"),
+    t("tubitakContent3"),
+    t("tubitakContent4"),
+  ];
 
   const googleContent = [
     t("googleContent1"),
     t("googleContent2"),
     t("googleContent3"),
   ];
+
+  const socialMediaContent = [t("socialMedaContent1"), t("socialMedaContent2")];
+  const uavContent = [t("uavContent1"), t("uavContent2"), t("uavContent3")];
 
   const evaImages = [
     { src: "/images/eva.png", href: "https://evateam.altinbas.edu.tr" },
@@ -89,6 +95,23 @@ export default function Home() {
   const sugarImages = [
     { src: "/images/sugartech.png", href: "https://sugartech.io" },
     { src: "/images/rapidlogo.png", href: "https://rapidapp.sugartech.io" },
+  ];
+
+  const tubitakImages = [
+    { src: "/images/tubitak.jpg", href: "https://tubitak.gov.tr/tr" },
+    { src: "/images/bilgem.png", href: "https://bilgem.tubitak.gov.tr" },
+  ];
+
+  const appImages = [
+    { src: "/images/uygulama1.png" },
+    { src: "/images/uygulama2.png" },
+    { src: "/images/uygulama3.png" },
+  ];
+
+  const uavImages = [
+    { src: "/images/uav1.png" },
+    { src: "/images/uav2.png" },
+    { src: "/images/uav3.png" },
   ];
 
   const googleImages = [
@@ -127,15 +150,42 @@ export default function Home() {
         onClose={() => setIsOpenSugarModal(false)}
       ></Modal>
       <Modal
+        content={tubitakContent}
+        images={tubitakImages}
+        header="TUBITAK"
+        show={isOpenTubitakModal}
+        onClose={() => setIsOpenTubitakModal(false)}
+      />
+      <Modal
+        content={socialMediaContent}
+        images={appImages}
+        header={t("socialMediaTitle")}
+        show={isOpenSocialMediaModal}
+        onClose={() => setIsOpenSocialMediaModal(false)}
+      />
+      <Modal
+        content={uavContent}
+        images={uavImages}
+        header={t("projectUavTitle")}
+        show={isOpenUavModal}
+        onClose={() => setIsOpenUavModal(false)}
+      />
+      <Modal
         content={googleContent}
         images={googleImages}
         header={t("google")}
         show={isOpenGoogleModal}
         onClose={() => setIsOpenGoogleModal(false)}
-      ></Modal>
+      />
       <CertificateModal
         show={isOpenCertificates}
         onClose={() => setIsOpenCertificate(false)}
+      />
+      <ProjectsModal
+        show={isOpenProjects}
+        onClose={() => setIsOpenProjects(false)}
+        setIsOpenSocialMediaModal={setIsOpenSocialMediaModal}
+        setIsOpenUavModal={setIsOpenUavModal}
       />
       <div className={styles.card}>
         {!isMobile && <LanguageSelector />}
@@ -151,7 +201,6 @@ export default function Home() {
           <div
             className={styles.mailContainer}
             style={{ display: isOpenMail ? "flex" : "none" }}
-            onClick={handleClick}
           >
             <span>{mail}</span>
           </div>
@@ -201,6 +250,17 @@ export default function Home() {
               </div>
               <div
                 className={styles.container}
+                onClick={() => setIsOpenTubitakModal(true)}
+              >
+                <span>TUBITAK</span>
+                <img
+                  style={{ objectFit: "contain" }}
+                  src="/images/tubitak.jpg"
+                  alt="berkay kaynar sugar tech"
+                />
+              </div>
+              <div
+                className={styles.container}
                 onClick={() => setIsOpenGoogleModal(true)}
               >
                 <span>{t("google")} </span>
@@ -211,6 +271,12 @@ export default function Home() {
                 onClick={() => setIsOpenCertificate(true)}
               >
                 <span>{t("certificates")} </span>
+              </div>
+              <div
+                className={styles.container}
+                onClick={() => setIsOpenProjects(true)}
+              >
+                <span>{t("myProjects")} </span>
               </div>
             </div>
           </div>

@@ -22,7 +22,8 @@ export default function CertificateModal({
   const [isOpenGoogleFlutter, setIsOpenGoogleFlutter] = useState(false);
   const [isOpenGoogleEntre, setIsOpenGoogleEntre] = useState(false);
   const [isOpenAutonom, setIsOpenAutonom] = useState(false);
-  const [isOpenUav, setIsOpenUav] = useState(false);
+  const [isOpenUav23, setIsOpenUav23] = useState(false);
+  const [isOpenUav24, setIsOpenUav24] = useState(false);
 
   const imageModalList = [
     {
@@ -97,9 +98,16 @@ export default function CertificateModal({
     },
     {
       src: "/images/certificates/teknofestUav.png",
-      title: "teknofestUav",
-      show: isOpenUav,
-      onClose: () => setIsOpenUav(false),
+      title: "teknofestUav23",
+      show: isOpenUav23,
+      onClose: () => setIsOpenUav23(false),
+      href: "",
+    },
+    {
+      src: "/images/certificates/teknofestUav24.png",
+      title: "teknofestUav24",
+      show: isOpenUav24,
+      onClose: () => setIsOpenUav24(false),
       href: "",
     },
   ];
@@ -142,8 +150,12 @@ export default function CertificateModal({
       name: "teknofestAutonom",
     },
     {
-      onClick: () => setIsOpenUav(true),
-      name: "teknofestUav",
+      onClick: () => setIsOpenUav23(true),
+      name: "teknofestUav23",
+    },
+    {
+      onClick: () => setIsOpenUav24(true),
+      name: "teknofestUav24",
     },
   ];
   return (

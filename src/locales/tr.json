@@ -1,9 +1,9 @@
 {
     "experiences" : "Tecrübelerim",
     "aboutMe" : "Hakkımda",
-    "aboutMe1" : "Merhaba, ben Berkay. İstanbul Altınbaş Üniversitesi'nde Bilgisayar Mühendisliği bölümü üçüncü sınıf öğrencisiyim. Yazılım dünyasına lise son sınıfta Python ile adım attım. BTK Akademi'deki derslerle başlangıçta Python, ardından Java ve Kotlin dillerini öğrenerek bu alanlardaki sertifikalarımı aldım. Okulumun 1. sınıfında C dilini öğrenme fırsatı buldum.",
-    "aboutMe2" : "2. sınıfta, okulum bünyesinde yer alan EVA Team kulübüne katıldım. Bu kulüpte, otonom insansız hava araçlarının yazılım bölümünde görev aldım. Teknofest Uluslararası İnsansız Hava Araçları yarışmasında geliştirdiğimiz Döner Kanat İHA ve Sabit Kanat İHA araçlarıyla katıldık ve her iki araçta da performans ödülü almaya hak kazandık. Ayrıca, Google Oyun ve Uygulama Akademisi'ne başvurarak akademi bursiyeri olma şansı elde ettim. Bu akademide Dart dilini öğrenerek Flutter ile birlikte mobil uygulamalar geliştirdim. Bu süreçte edindiğim bilgi ve deneyimlerle kendimi sürekli geliştirmeye odaklanıyorum.",
-    "aboutMe3" :"Ayrıca, okulumun 2. sınıfında bölüm ikinciliğimi elde ettim, bu başarılarla birlikte hem akademik hem de projelerdeki aktif rolümle gelecekteki başarılarıma sağlam bir temel oluşturmayı hedefliyorum.",
+    "aboutMe1" : "Merhaba, ben Berkay. İstanbul Altınbaş Üniversitesi Bilgisayar Mühendisliği bölümünde dördüncü sınıf öğrencisiyim. Yazılım dünyasına lise yıllarımda Python ile adım attım. BTK Akademi'de aldığım derslerle önce Python, ardından Java ve Kotlin dillerini öğrenerek bu alanlarda sertifikalar kazandım. Üniversite eğitimimin ilk yılında C dili ile tanışma fırsatı buldum.",
+    "aboutMe2" : "İkinci sınıfta, üniversitemizin EVA Team kulübüne katıldım ve takım arkadaşlarımla birlikte iki sezon boyunca Teknofest Robotaksi Binek Otonom Araç ve İnsansız Hava Aracı yarışmalarına katıldım. Bu süreçte birçok değerli deneyim ve başarı elde ettim. Aynı zamanda, Google Oyun ve Uygulama Akademisi'ne seçilerek bursiyer oldum ve burada Dart dilini öğrenip Flutter ile mobil uygulamalar geliştirdim.",
+    "aboutMe3" :"Bunların yanı sıra, ikinci sınıfta bölüm ikinciliği derecesini elde ettim. Hem akademik başarılarım hem de projelerdeki aktif rolümle, gelecekte yazılım dünyasında daha büyük adımlar atmayı hedefliyorum.",
     
     "evaContent1" :"Üniversite eğitimim süresince aktif olarak katıldığım İnsansız Hava Araçları (İHA) Kulübü, beni geniş bir teknik bilgi ve uygulama yelpazesi ile donatmıştır. Bu kulüpte geçirdiğim süre zarfında, Pixhawk uçuş kontrol kartı üzerinde yoğunlaşarak İHA'ların uçuş dinamikleri ve kontrol sistemleri konusunda derin bir anlayış geliştirdim. Ayrıca, otonom uçuş algoritmalarının tasarımı ve uygulanması süreçlerinde aktif rol aldım.",
     "evaContent2" : "Telemetri sistemleriyle olan etkileşimi anlamak adına Pixhawk'a çeşitli senaryolarda telemetri ile iletişim kurma deneyimim oldu. Bunun yanı sıra, araçlarımıza entegre ettiğimiz Jetson ve Raspberry gibi mini bilgisayarlar aracılığıyla kablolu bağlantı sağlama becerisi edindim. Bu süreçte, özellikle bu mini bilgisayarların içinde barındırdığı Linux tabanlı işletim sistemleri ile çalışmak, sorun giderme yeteneklerimi geliştirdi.",
@@ -13,6 +13,12 @@
     "sugarTechContent1" :"Biruni Teknopark'ta gerçekleştirdiğim 3 aylık staj süreci, yazılım geliştirme alanında kapsamlı bir deneyim ve öğrenme fırsatı sunmuştur. Sugar Technology şirketinde stajyer yazılım geliştirici olarak görev aldım ve bu süre zarfında çeşitli teknolojilere dair geniş bir bilgi yelpazesi edindim.",
     "sugarTechContent2" :"Staj kapsamında özellikle React, React Native, Unity ve Java Spring gibi popüler teknolojileri kullanarak projelerde yer aldım. React ile web uygulamalarının geliştirilmesi, React Native ve Unity kullanılarak mobil uygulamaların ön yüz tasarımlarının oluşturulması, Java Spring framework'ü ile bu uygulamaların back-end servislerinin yazılması gibi görevleri üstlendim. Bu süreçte, hem öğrenme hem de uygulama aşamalarında geniş bir beceri seti elde etme şansı buldum.",
     "sugarTechContent3" :"Ayrıca, farklı projelerde ve çeşitli programlama dillerinde çalışarak problem çözme yeteneklerimi geliştirdim. Ekip içinde etkili iletişim becerileri kazanma fırsatı buldum ve proje yönetimi konusunda pratik deneyimler elde ettim. Bu staj süreci, teknik yeteneklerimi artırmanın yanı sıra takım içinde etkili bir oyuncu olabilmek adına da önemli bir platform sağladı.",
+
+    "tubitakContent1" : "TÜBİTAK BİLGEM'deki Kurumsal Uygulamalar Departmanında gerçekleştirdiğim 20 günlük yaz stajı boyunca birçok değerli deneyim kazandım.",
+    "tubitakContent2" : "Stajımın ilk haftalarında, React kullanarak iki projeyi başarıyla tamamladım. Bu projelerde PrimeReact ve PrimeFlex kütüphanelerini etkin bir şekilde kullanarak, projelerin responsive bir yapıya sahip olmasını sağladım. Bu süreçte, kullanıcı deneyimini optimize etmeye ve projelerin her ekranda sorunsuz çalışmasına özen gösterdim.",
+    "tubitakContent3" : "Stajın kalan günlerinde ise Jenkins, Sentry, SonarQube, RabbitMQ ve ElasticSearch gibi günümüz yazılım dünyasında sıkça kullanılan teknolojiler üzerinde çalıştım ve bu teknolojiler hakkında derinlemesine araştırmalar yaptım. Özellikle Sentry'yi bir projeye entegre ederek hata izleme ve raporlama süreçlerine katkıda bulundum.",
+    "tubitakContent4" : "Bu staj, bana teknik bilgi ve yetenekler kazandırmanın yanı sıra, profesyonel çalışma ortamında takım çalışmasının ve iş birliğinin önemini de öğretti. Kısa sürede kazandığım bu deneyimlerin yanı sıra, TÜBİTAK BİLGEM’de birçok değerli insanla tanışma fırsatı buldum ve güzel dostluklar edindim.",
+
 
     "google" : "Google Oyun ve Uygulama Akademisi",
     "googleContent1" :"2023 yılında Google Oyun ve Uygulama Akademisi'ne kabul edilerek bursiyer olarak seçilmek, yazılım geliştirme ve girişimcilik alanında kazandığım değerli deneyimleri içermektedir. Bu akademi kapsamında, Flutter ve Dart teknolojilerini etkin bir şekilde kullanarak mobil uygulama geliştirmenin yanı sıra, bilişim hukuku, proje yönetimi ve girişimcilik konularında kapsamlı derslere katıldım.",
@@ -30,7 +36,17 @@
     "googleFlutter": "Oyun ve Uygulama Akademisi: Flutter ile Uygulama Geliştirme",
     "googleEntrepreneurship" : "Oyun ve Uygulama Akademisi: Teknoloji Girişimciliği",
     "teknofestAutonom" : "Robotaksi Binek Otonom Araç Yarışması Katılım Belgesi",
-    "teknofestUav" :"Uluslararası İnsansız Hava Araçları Araçları Yarışması Katılım Belgesi"
+    "teknofestUav23" :"Uluslararası İnsansız Hava Araçları Araçları Yarışması Katılım Belgesi 2023",
+    "teknofestUav24" :"Uluslararası İnsansız Hava Araçları Araçları Yarışması Katılım Belgesi 2024",
+
+    "myProjects" : "Projelerim",
+    "projectUavTitle" : "İHA'ların uçuş kartları için masaüstü uygulama",
+    "socialMediaTitle" : "Spor yapanlar için mobil sosyal medya uygulaması",
+    "socialMedaContent1":"Uygulamanın amacı, spor yapmayı seven ancak bunu tek başına yapmaktan sıkılan insanlar için bir araya gelerek birlikte spor yapabilecekleri arkadaşlar bulmalarını sağlayan bir platform sunmaktır. Kullanıcılar, harita üzerinden spor yapacakları lokasyonu seçip, yapacakları spor dalını ve zaman bilgilerini girerek etkinlikler oluşturabiliyor. Etkinlik oluşturma aşamasında, açıklama ve fotoğraf gibi detaylar da eklenebiliyor. Etkinlik oluşturulduktan sonra, diğer kullanıcıların haritasında bu etkinlik görünür hale geliyor ve katılmak isteyen kişiler etkinlik sahibine katılım isteği gönderebiliyor. Onaylanan isteklerle kullanıcılar uygulama içi mesajlaşma özelliği sayesinde iletişim kurabiliyor ve spora başlamadan önce tanışma fırsatı buluyorlar.",
+    "socialMedaContent2":"Bu projede, front-end tarafında React Native kullandım. Back-end kısmında ise Node.js ve Express frameworkünden faydalandım. Mesajlaşma ve anlık iletişim için SocketIO entegrasyonu yaptım ve şu ana kadar projenin %70'ini tamamladım. Halen üzerinde çalışmaya ve geliştirmeye devam ettiğim bir proje.",
+    "uavContent1":"Bu projenin amacı, İHA'ların uçuş kontrol kartı (Pixhawk) parametrelerini değiştirmek ve uçuş sırasında İHA'nın tüm kontrolünü takip etmektir. Aynı zamanda, İHA'nın otonom uçuş yapabilmesine olanak tanır. Uygulamanın bir diğer özelliği ise, eğer İHA üzerinde canlı yayın akışı sağlayan bir kamera varsa, bu kamera görüntüsünü anlık olarak izleme imkanı sunmasıdır.",
+    "uavContent2":"Projemiz, TÜBİTAK 2209-A - Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı kapsamında destek almaya hak kazanmıştır.",
+    "uavContent3":"Projenin front-end kısmında Electron.js kullanarak çok platformlu bir masaüstü uygulaması geliştirdik. Araçla haberleşme kısmında ise Python’da 'dronekit' ve 'pymavlink' kütüphanelerinden faydalandık. Veriyi arayüze aktarmak için SocketIO kullandık. Projeyi, Teknofest Uluslararası İnsansız Hava Araçları Yarışması'nda aktif olarak kullanarak başarılı bir sonuç elde ettik."
 
 
 }
